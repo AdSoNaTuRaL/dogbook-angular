@@ -1,0 +1,42 @@
+<br />
+<h4 class="text-center">Sign-up and show your doggie to the world!</h4>
+
+<form class="form mt-4" [formGroup]="newUserForm" (submit)="register()">
+  <div class="form-group">
+    <input
+      type="email"
+      class="form-control"
+      placeholder="E-mail"
+      formControlName="email"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Fullname"
+      formControlName="fullName"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      autocomplete="username"
+      class="form-control"
+      formControlName="userName"
+      placeholder="Username"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      autocomplete="new-password"
+      formControlName="password"
+      class="form-control"
+      placeholder="Password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Sign-up</button>
+</form>
+<br />
+<p>Is already a user? <a [routerLink]="['']">Sign In</a></p>
