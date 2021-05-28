@@ -9,6 +9,20 @@
       placeholder="E-mail"
       formControlName="email"
     />
+    <app-message
+      *ngIf="
+        newUserForm.get('email')?.errors?.required &&
+        newUserForm.get('email')?.touched
+      "
+      messageText="Mandatory e-mail"
+    ></app-message>
+    <app-message
+      messageText="Invalid e-mail"
+      *ngIf="
+        newUserForm.get('email')?.errors?.email &&
+        newUserForm.get('email')?.touched
+      "
+    ></app-message>
   </div>
   <div class="form-group">
     <input
@@ -17,6 +31,13 @@
       placeholder="Fullname"
       formControlName="fullName"
     />
+    <app-message
+      messageText="Invalid name"
+      *ngIf="
+        newUserForm.get('fullName')?.errors &&
+        newUserForm.get('fullName')?.touched
+      "
+    ></app-message>
   </div>
   <div class="form-group">
     <input
@@ -24,8 +45,29 @@
       autocomplete="username"
       class="form-control"
       formControlName="userName"
-      placeholder="Username"
+      placeholder="username"
     />
+    <app-message
+      *ngIf="
+        newUserForm.get('userName')?.errors?.required &&
+        newUserForm.get('userName')?.touched
+      "
+      messageText="Mandatory username"
+    ></app-message>
+    <app-message
+      *ngIf="
+        newUserForm.get('userName')?.errors?.lower &&
+        newUserForm.get('userName')?.touched
+      "
+      messageText="username must be in lowercase"
+    ></app-message>
+    <app-message
+      *ngIf="
+        newUserForm.get('userName')?.errors?.exists &&
+        newUserForm.get('userName')?.touched
+      "
+      messageText="username already exists"
+    ></app-message>
   </div>
   <div class="form-group">
     <input
@@ -35,6 +77,11 @@
       class="form-control"
       placeholder="Password"
     />
+    <app-message
+      *ngIf="newUserForm?.errors?.userEqualsPassword"
+      messageText="Password can't be equal to username"
+    >
+    </app-message>
   </div>
   <button type="submit" class="btn btn-primary btn-block">Sign-up</button>
 </form>
