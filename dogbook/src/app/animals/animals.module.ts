@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AnimalsRoutingModule } from './animals-routing.module';
 import { ListAnimalsComponent } from './list-animals/list-animals.component';
+import { AnimalComponent } from './animal/animal.component';
 
 
 @NgModule({
   declarations: [
-    ListAnimalsComponent
+    ListAnimalsComponent,
+    AnimalComponent
   ],
   imports: [
     CommonModule,
