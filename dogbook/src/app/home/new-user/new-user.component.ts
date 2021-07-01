@@ -10,7 +10,6 @@ import { NewUserService } from './new-user.service';
 @Component({
   selector: 'app-new-user',
   templateUrl: './new-user.component.html',
-  styleUrls: ['./new-user.component.css'],
 })
 export class NewUserComponent implements OnInit {
   newUserForm!: FormGroup;

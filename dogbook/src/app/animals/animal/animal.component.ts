@@ -4,7 +4,6 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-animal',
   templateUrl: './animal.component.html',
-  styleUrls: ['./animal.component.css'],
 })
 export class AnimalComponent implements OnInit {
   private urlOriginal = '';

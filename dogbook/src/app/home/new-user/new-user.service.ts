@@ -15,6 +15,8 @@ export class NewUserService {
   }
 
   userAlreadyExists(username: string): Observable<any> {
-    return this.httpCliente.get(`${environment.apiUrl}/user/exists/${username}`);
+    return this.httpCliente.get(
+      `${environment.apiUrl}/user/exists/${username}`
+    );
   }
 }

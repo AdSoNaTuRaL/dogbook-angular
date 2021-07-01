@@ -1,6 +1,8 @@
 import { AbstractControl } from '@angular/forms';
 
-export function userPasswordEqualsValidator(formGroup: AbstractControl): object | null {
+export function userPasswordEqualsValidator(
+  formGroup: AbstractControl
+): object | null {
   const username = formGroup.get('userName')?.value ?? '';
   const password = formGroup.get('password')?.value ?? '';
 
