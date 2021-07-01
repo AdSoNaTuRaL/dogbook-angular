@@ -6,11 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: ListAnimalsComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AnimalsRoutingModule { }
+export class AnimalsRoutingModule {}
