@@ -15,6 +15,15 @@
         <i class="fa fa-comment-o fa-2x mr-2 ml-2">{{ animal.comments }}</i>
         <i (click)="deleteAnimal()" class="fa fa-trash-o fa-2x pull-right"></i>
       </small>
+
+      <app-comments
+        [id]="animalId"
+        *ngIf="animal.allowComments; else warning"
+      ></app-comments>
+
+      <ng-template #warning>
+        <p>User does not have permission to comment</p>
+      </ng-template>
     </div>
   </div>
 </div>
