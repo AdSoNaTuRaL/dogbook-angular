@@ -1,0 +1,11 @@
+<div [ngClass]="{ 'active=menu': showMenu }">
+  <div class="menu-bar">
+    <i
+      class="fa fa-window-close"
+      (click)="openMenu()"
+      (keyup.space)="openMenu()"
+    ></i>
+    <ng-content></ng-content>
+  </div>
+  <div class="overlay" (click)="openMenu()"></div>
+</div>
