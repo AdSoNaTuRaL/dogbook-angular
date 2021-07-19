@@ -11,6 +11,7 @@ import { CardModule } from '../components/card/card.module';
 import { GridAnimalsPicturesComponent } from './grid-animals-pictures/grid-animals-pictures.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { CommentsComponent } from './animal-detail/comments/comments.component';
+import { NewAnimalComponent } from './new-animal/new-animal.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommentsComponent } from './animal-detail/comments/comments.component';
     GridAnimalsPicturesComponent,
     AnimalDetailComponent,
     CommentsComponent,
+    NewAnimalComponent,
   ],
   imports: [CommonModule, AnimalsRoutingModule, CardModule, SharedModule],
 })
