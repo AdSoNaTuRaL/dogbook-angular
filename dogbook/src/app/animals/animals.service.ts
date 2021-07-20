@@ -42,13 +42,13 @@ export class AnimalsService {
 
   upload(
     description: string,
-    allowComments: boolean,
+    allowComment: boolean,
     file: File
-  ): Observable<any> {
+  ): Observable<HttpEvent<object>> {
     const formData = new FormData();
     formData.append('description', description);
-    formData.append('allowComments', allowComments ? 'true' : 'false');
-    formData.append('file', file);
+    formData.append('allowComments', allowComment ? 'true' : 'false');
+    formData.append('imageFile', file);
 
     return this.httpClient.post(
       `${environment.apiUrl}/photos/upload`,
